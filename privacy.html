@@ -224,477 +224,599 @@ mjx-container { break-inside: avoid; }
 .md-alert-text-container::after { content: attr(data-text); text-transform: capitalize; pointer-events: none; margin-right: 1ch; }
 
 </style>
-<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Merriweather:900,900italic,300,300italic&amp;subset=latin-ext' type='text/css' />
-<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Lato:900,300&amp;subset=latin-ext' type='text/css' />
-<style type='text/css'  id="style-theme_css">@include-when-export url(https://fonts.googleapis.com/css?family=Merriweather:900,900italic,300,300italic&subset=latin-ext);
-@include-when-export url(https://fonts.googleapis.com/css?family=Lato:900,300&subset=latin-ext);
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700,700italic&amp;subset=latin,cyrillic-ext,cyrillic,latin-ext' type='text/css' />
+<style type='text/css'  id="style-theme_css">/* meyer reset -- http://meyerweb.com/eric/tools/css/reset/ , v2.0 | 20110126 | License: none (public domain) */
 
+@include-when-export url(https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700,700italic&subset=latin,cyrillic-ext,cyrillic,latin-ext);
+
+/* =========== */
+
+/* pt-serif-regular - latin */
+/* pt-serif-italic - latin */
+/* pt-serif-700 - latin */
+/* pt-serif-700italic - latin */
 :root {
-	--control-text-color: #777;
+	--active-file-bg-color: #dadada;
+	--active-file-bg-color: rgba(32, 43, 51, 0.63);
+	--active-file-text-color: white;
+	--bg-color: #f3f2ee;
+	--text-color: #1f0909;
+	--control-text-color: #444;
+	--rawblock-edit-panel-bd: #e5e5e5;
+
+	--select-text-bg-color: rgba(32, 43, 51, 0.63);
+  --select-text-font-color: white;
 }
 
-/**
- * forked from pixyll.com
- * MIT license
- */
-
-h1,
-.h1,
-.f1 {
-	font-size: 2rem;
-	line-height: 2.5rem;
-}
-h2,
-.h2,
-.f2 {
-	font-size: 1.5rem;
-	line-height: 2rem;
-}
-h3,
-.h3,
-.f3 {
-	font-size: 1.25rem;
-	line-height: 1.5rem;
-}
-p,
-.p,
-.f4,
-h4,
-h5,
-h6,
-dl,
-ol,
-ul,
-pre[cid],
-div[cid],
-#typora-source {
-	font-size: 1.125rem;
-	line-height: 1.5rem;
+pre {
+	--select-text-bg-color: #36284e;
+	--select-text-font-color: #fff;
 }
 
-h4 {
-	font-size: 1.13rem;
+html {
+	font-size: 16px;
+	-webkit-font-smoothing: antialiased;
 }
-/*
- Pixyll
- A simple, beautiful theme for Jekyll that emphasizes content rather than aesthetic fluff.
- Best served with BASSCSS (http://jxnblk.github.io/basscss)
- Crafted with <3 by John Otander (@4lpine) - ©2015 John Otander MIT License http://opensource.org/licenses/MIT
 
-*/
-
-body {
-	font-family: "Merriweather", "PT Serif", Georgia, "Times New Roman", "STSong", 'Segoe UI Emoji','SF Pro', Serif;
-	line-height: 1.5rem;
-	font-weight: 400;
+html, body {
+	background-color: #f3f2ee;
+	font-family: "PT Serif", 'Times New Roman', 'SF Pro', Times, serif;
+	color: #1f0909;
+	line-height: 1.5em;
 }
+
+/*#write {
+	overflow-x: auto;
+    max-width: initial;
+	padding-left: calc(50% - 17em);
+    padding-right: calc(50% - 17em);
+}
+
+@media (max-width: 36em) {
+ 	#write {
+ 		padding-left: 1em;
+    	padding-right: 1em;
+ 	}
+}*/
 
 #write {
-	max-width: 914px;
-	color: #333;
+	max-width: 40em;
 }
 
 @media only screen and (min-width: 1400px) {
 	#write {
-		max-width: 1100px;
+			max-width: 914px;
 	}
 }
 
-@media only screen and (min-width: 1700px) {
-	#write {
-		max-width: 1200px;
-	}
+ol li {
+	list-style-type: decimal;
+	list-style-position: outside;
+}
+ul li {
+	list-style-type: disc;
+	list-style-position: outside;
 }
 
-img {
-	width: auto;
-	max-width: 100%;
-}
-body {
-	font-size: 1.5rem;
-	box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
+ol,
+ul {
+	list-style: none;
 }
 
-.ty-table-edit {
-	background: #ededed;
+blockquote,
+q {
+	quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* styles */
+
+/* ====== */
+
+/* headings */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: bold;
+}
+h1 {
+	font-size: 1.875em;
+	/*30 / 16*/
+	line-height: 1.6em;
+	/* 48 / 30*/
+	margin-top: 2em;
+}
+h2,
+h3 {
+	font-size: 1.3125em;
+	/*21 / 16*/
+	line-height: 1.15;
+	/*24 / 21*/
+	margin-top: 2.285714em;
+	/*48 / 21*/
+	margin-bottom: 1.15em;
+	/*24 / 21*/
+}
+h3 {
+	font-weight: normal;
+}
+h4 {
+	font-size: 1.125em;
+	/*18 / 16*/
+	margin-top: 2.67em;
+	/*48 / 18*/
+}
+h5,
+h6 {
+	font-size: 1em;
+	/*16*/
+}
+h1 {
+	border-bottom: 1px solid;
+	margin-bottom: 1.875em;
+	padding-bottom: 0.8125em;
+}
+/* links */
+
+a {
+	text-decoration: none;
+	color: #065588;
+}
+a:hover,
+a:active {
+	text-decoration: underline;
+}
+/* block spacing */
+
+p,
+blockquote,
+.md-fences {
+	margin-bottom: 1.5em;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin-bottom: 1.5em;
+}
+/* blockquote */
+
+blockquote {
+	font-style: italic;
+	border-left: 5px solid;
+	margin-left: 2em;
+	padding-left: 1em;
+}
+/* lists */
+
+ul,
+ol {
+	margin: 0 0 1.5em 1.5em;
+}
+/* tables */
+.md-meta,.md-before, .md-after {
+	color:#999;
 }
 
 table {
-	width: 100%;
-	font-size: 1.125rem;
+	margin-bottom: 1.5em;
+	/*24 / 16*/
+	font-size: 1em;
+	/* width: 100%; */
 }
-table > thead > tr > th,
-table > thead > tr > td,
-table > tbody > tr > th,
-table > tbody > tr > td,
-table > tfoot > tr > th,
-table > tfoot > tr > td {
-	padding: 12px;
-	line-height: 1.2;
+thead th,
+tfoot th {
+	padding: .25em .25em .25em .4em;
+	text-transform: uppercase;
+}
+th {
+	text-align: left;
+}
+td {
 	vertical-align: top;
-	border-top: 1px solid #333;
-}
-table > thead > tr > th {
-	vertical-align: bottom;
-	border-bottom: 2px solid #333;
-}
-table > caption + thead > tr:first-child > th,
-table > caption + thead > tr:first-child > td,
-table > colgroup + thead > tr:first-child > th,
-table > colgroup + thead > tr:first-child > td,
-table > thead:first-child > tr:first-child > th,
-table > thead:first-child > tr:first-child > td {
-	border-top: 0;
-}
-table > tbody + tbody {
-	border-top: 2px solid #333;
-}
-p {
-	font-weight: 300;
-	line-height: 1.5;
-}
-abbr {
-	border-bottom: 1px black dotted;
-	cursor: help;
-}
-pre,
-code {
-	font-family: Menlo, Monaco, "Courier New", monospace;
+	padding: .25em .25em .25em .4em;
 }
 
 code,
-.md-fences  {
-	color: #7a7a7a;
+.md-fences {
+	background-color: #dadada;
+}
+
+code {
+	padding-left: 2px;
+	padding-right: 2px;
 }
 
 .md-fences {
-	padding: 1.125em;
-	margin-bottom: 0.88em;
-	font-size: 1rem;
-	border: 1px solid #7a7a7a;
-	padding-bottom: 0.5rem;
-	padding-top: 0.5rem;
+	margin-left: 2em;
+	margin-bottom: 3em;
+	padding-left: 1ch;
+	padding-right: 1ch;
 }
 
-blockquote {
-	padding: 1.33em;
-	font-style: italic;
-	border-left: 5px solid #7a7a7a;
-	color: #555;
+pre,
+code,
+tt {
+	font-size: .875em;
+	line-height: 1.714285em;
 }
-blockquote em {
-	color: #000;
+/* some fixes */
+
+h1 {
+	line-height: 1.3em;
+	font-weight: normal;
+	margin-bottom: 0.5em;
 }
-blockquote footer {
-	font-size: .85rem;
-	font-style: normal;
-	background-color: #fff;
-	color: #7a7a7a;
-	border-color: transparent;
+
+p + ul,
+p + ol{
+	margin-top: .5em;
 }
-h1,
-.h1,
+
+h3 + ul,
+h4 + ul,
+h5 + ul,
+h6 + ul,
+h3 + ol,
+h4 + ol,
+h5 + ol,
+h6 + ol {
+	margin-top: .5em;
+}
+
+li > ul,
+li > ol {
+	margin-top: inherit;
+	margin-bottom: 0;
+}
+
+li ol>li {
+	list-style-type: lower-alpha;
+}
+
+li li ol>li{
+	list-style-type: lower-roman;
+}
+
 h2,
-.h2,
-h3,
-.h3,
-h4,
-.h4,
-h5,
-.h5,
-h6,
-.h6 {
-	font-family: "Lato", 'Helvetica Neue', Helvetica, sans-serif;
-	font-weight: bold;
-	line-height: 1.2;
-	margin: 1em 0 0.5em;
+h3 {
+	margin-bottom: .75em;
 }
-@media screen and (min-width: 48em) {
-	.h1,
-	h1 {
-		font-size: 3.250rem;
-	}
-	.h2,
-	h2 {
-		font-size: 2.298rem;
-	}
-	.h3,
-	h3 {
-		font-size: 1.625rem;
-	}
-	.h4,
-	h4 {
-		font-size: 1.3rem;
-	}
-	#write>h4.md-focus:before,
-	#write>h5.md-focus:before,
-	#write>h6.md-focus:before{
-		top: 1px;
-	}
-	.p,
-	p,
-	li {
-		font-size: 1.25rem;
-		line-height: 1.8;
-	}
-	table {
-		font-size: 1.25rem;
-	}
+hr {
+	border-top: none;
+	border-right: none;
+	border-bottom: 1px solid;
+	border-left: none;
 }
-@media (max-width: 48em) {
-	blockquote {
-		margin-left: 1rem;
-		margin-right: 0;
-		padding: 0.5em;
-	}
-	.h1,
-	h1 {
-		font-size: 2.827rem;
-	}
-	.h2,
-	h2 {
-		font-size: 1.999rem;
-	}
-	.h3,
-	h3 {
-		font-size: 1.413rem;
-	}
-	.h4,
-	h4 {
-		font-size: 1.3rem;
-	}
+h1 {
+	border-color: #c5c5c5;
 }
-@media screen and (min-width: 64em) {
-	.h1,
-	h1 {
-		font-size: 4.498rem;
-	}
-	.h2,
-	h2 {
-		font-size: 2.29rem;
-	}
-	.h3,
-	h3 {
-		font-size: 1.9rem;
-	}
-	.h4,
-	h4 {
-		font-size: 1.591rem;
-	}
-	#write>h4.md-focus:before{
-		top:4px;
-	}
-}
-a {
-	color: #463F5C;
-	text-decoration: underline;
+blockquote {
+	border-color: #bababa;
+	color: #656565;
 }
 
-#write {
-	padding-top: 2rem;
+blockquote ul,
+blockquote ol {
+	margin-left:0;
 }
 
-#write pre.md-meta-block {
-	min-height: 35px;
-	padding: 0.5em 1em;
-	white-space: pre;
-	border: 0px;
-
-	border-left: 30px #f8f8f8 solid;
-	border-right: 30px #f8f8f8 solid;
-	width: 100vw;
-	max-width: calc(100% + 60px);
-
-	margin-left: -30px;
-	margin-bottom: 2em;
-	margin-top: -2010px;
-	padding-top: 2000px;
-	padding-bottom: 10px;
-	line-height: 1.5em;
-	color: #7a7a7a;
-	background-color: #fafafa;
-	font-family: 'Lato', 'Helvetica Neue', Helvetica, sans-serif;
-	font-weight: 300;
-	clear: both;
-	padding-left: 0;
-	font-size:1.125rem;
+.ty-table-edit {
+	background-color: transparent;
 }
-.md-image>.md-meta {
-	color: #463F5C
+thead {
+	background-color: #dadada;
 }
-.footnotes {
-	font-size:1.1rem;
+tr:nth-child(even) {
+	background: #e8e7e7;
 }
-.md-tag {
-	font-family: 'Lato', 'Helvetica Neue', Helvetica, sans-serif;
+hr {
+	border-color: #c5c5c5;
 }
-.code-tooltip {
-	background: white;
-}
-.code-tooltip-content {
-	font-size: 1.1rem;
-}
-
 .task-list{
-	padding-left: 0;
+	padding-left: 1rem;
 }
 
 .md-task-list-item {
-	padding-left:34px;
+	padding-left: 1.5rem;
+	list-style-type: none;
 }
 
-.md-task-list-item > input{
+.md-task-list-item > input:before {
+	content: '\221A';
+	display: inline-block;
 	width: 1.25rem;
-	height: 1.25rem;
-	display: block;
-	-webkit-appearance: initial;
-	top: -0.2rem;
-	margin-left: -1.6em;
-	margin-top: calc(1rem - 7px);
-	border: none;
-}
-
-.md-task-list-item > input:focus{
-	outline: none;
-	box-shadow: none;
-}
-
-.md-task-list-item > input:before{
-	border: 1px solid #555;
-	border-radius: 1.5rem;
-	width: 1.5rem;
-	height: 1.5rem;
-	background: #fff;
-	content: ' ';
-	transition: background-color 200ms ease-in-out;
-	display: block;
+  	height: 1.6rem;
+	vertical-align: middle;
+	text-align: center;
+	color: #ddd;
+	background-color: #F3F2EE;
 }
 
 .md-task-list-item > input:checked:before,
 .md-task-list-item > input[checked]:before{
-	background: #333;
-	border-width: 2px;
-	display:inline-block;
-	transition: background-color 200ms ease-in-out;
+	color: inherit;
 }
 
-.md-task-list-item > input:checked:after,
-.md-task-list-item > input[checked]:after {
-	opacity: 1;
+#write pre.md-meta-block {
+	min-height: 1.875rem;
+	color: #555;
+	border: 0px;
+	background: transparent;
+	margin-top: -4px;
+	margin-left: 1em;
+	margin-top: 1em;
 }
 
-.md-task-list-item > input:after {
-	opacity: 1;
-	-webkit-transition: opacity 0.05s ease-in-out;
-	-moz-transition: opacity 0.05s ease-in-out;
-	transition: opacity 0.05s ease-in-out;
-	-webkit-transform: rotate(-45deg);
-	-moz-transform: rotate(-45deg);
-	transform: rotate(-45deg);
-	position: absolute;
-	top: 0.4375rem;
-	left: 0.28125rem;
-	width: 0.9375rem;
-	height: 0.5rem;
-	border: 3px solid #fff;
-	border-top: 0;
-	border-right: 0;
-	content: ' ';
-	opacity: 0;
+.md-image>.md-meta {
+	color: #9B5146;
 }
 
-.md-tag {
-	color:inherit;
+.md-image>.md-meta{
+	font-family: Menlo, 'Ubuntu Mono', Consolas, 'Courier New', 'Microsoft Yahei', 'Hiragino Sans GB', 'WenQuanYi Micro Hei', serif;
+}
+
+
+#write>h3.md-focus:before{
+	left: -1.5rem;
+	color:#999;
+	border-color:#999;
+}
+#write>h4.md-focus:before{
+	left: -1.5rem;
+	top: .25rem;
+	color:#999;
+	border-color:#999;
+}
+#write>h5.md-focus:before{
+	left: -1.5rem;
+	top: .0.3125rem;
+	color:#999;
+	border-color:#999;
+}
+#write>h6.md-focus:before{
+	left: -1.5rem;
+	top: 0.3125rem;
+	color:#999;
+	border-color:#999;
 }
 
 .md-toc:focus .md-toc-content{
 	margin-top: 19px;
 }
 
+.md-toc-content:empty:before{
+	color: #065588;
+}
+.md-toc-item {
+	color: #065588;
+}
+#write div.md-toc-tooltip {
+	background-color: #f3f2ee;
+}
+
 #typora-sidebar {
-	font-size:1rem !important;
+	background-color: #f3f2ee;
+	-webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.375);
+  	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.375);
 }
 
-.html-for-mac #typora-sidebar {
-	background-color:white;
+.pin-outline #typora-sidebar {
+	background: inherit;
+	box-shadow: none;
+	border-right: 1px dashed;
 }
 
-.outline-content li, .outline-content ul {
-	font-size:1rem !important;
+.pin-outline #typora-sidebar:hover .outline-title-wrapper {
+	border-left:1px dashed;
 }
 
-.outline-title {
-	line-height: inherit;
-	margin-top: 10px;
+.outline-item:hover {
+  background-color: #dadada;
+  border-left: 28px solid #dadada;
+  border-right: 18px solid #dadada;
 }
 
-.outline-expander {
-	width: 18px;
+.typora-node .outline-item:hover {
+  	border-right: 28px solid #dadada;
 }
 
 .outline-expander:before {
- 	content: "+";
-	font-family: inherit;
-	color: rgb(108, 108, 108); 
-  font-size: 1.5rem;
- 	top: -0.1rem;
+  content: "\f0da";
+  font-family: FontAwesome;
+  font-size:14px;
+  top: 1px;
 }
 
-.outline-expander:hover:before {
-	content: "+";
+.outline-expander:hover:before,
+.outline-item-open>.outline-item>.outline-expander:before {
+  content: "\f0d7";
 }
 
-.outline-item-open>.outline-item>.outline-expander:before{
-	content: "-";
+.modal-content {
+	background-color: #f3f2ee;
 }
 
-/** source code mode */
-#typora-source {
-	font-family: Courier, monospace;
-    color: #6A6A6A;
+.auto-suggest-container ul li {
+	list-style-type: none;
 }
 
-.os-windows #typora-source {
-	font-family: inherit;
+/** UI for electron */
+
+.megamenu-menu,
+#top-titlebar, #top-titlebar *,
+.megamenu-content {
+	background: #f3f2ee;
+	color: #1f0909;
 }
 
-.cm-s-typora-default .cm-header, 
-.cm-s-typora-default .cm-property,
-.CodeMirror.cm-s-typora-default div.CodeMirror-cursor {
-	color: #428bca;
+.megamenu-menu-header {
+	border-bottom: 1px dashed #202B33;
 }
 
-.cm-s-typora-default .cm-atom, .cm-s-typora-default .cm-number {
-	color: #777777;
+.megamenu-menu {
+	box-shadow: none;
+	border-right: 1px dashed;
+}
+
+header, .context-menu, .megamenu-content, footer {
+	font-family: "PT Serif", 'Times New Roman', Times, serif;
+    color: #1f0909;
+}
+
+#megamenu-back-btn {
+	color: #1f0909;
+	border-color: #1f0909;
+}
+
+.megamenu-menu-header #megamenu-menu-header-title:before {
+	color: #1f0909;
+}
+
+.megamenu-menu-list li a:hover, .megamenu-menu-list li a.active {
+	color: inherit;
+	background-color: #e8e7df;
+}
+
+.long-btn:hover {
+	background-color: #e8e7df;
+}
+
+#recent-file-panel tbody tr:nth-child(2n-1) {
+    background-color: transparent !important;
+}
+
+.megamenu-menu-panel tbody tr:hover td:nth-child(2) {
+    color: inherit;
+}
+
+.megamenu-menu-panel .btn {
+	background-color: #D2D1D1;
+}
+
+.btn-default {
+	background-color: transparent;
+}
+
+.typora-sourceview-on #toggle-sourceview-btn,
+.ty-show-word-count #footer-word-count {
+	background: #c7c5c5;
+}
+
+#typora-quick-open {
+    background-color: inherit;
 }
 
 .md-diagram-panel {
-	margin-top: 24px;
-	margin-left: -1.2em;
+	margin-top: 8px;
 }
 
-.md-mathjax-midline {
-	background: #fafafa;
+.file-list-item-file-name {
+	font-weight: initial;
 }
 
-.enable-diagrams pre.md-fences[lang="sequence"] .code-tooltip,
-.enable-diagrams pre.md-fences[lang="flow"] .code-tooltip,
-.enable-diagrams pre.md-fences[lang="mermaid"] .code-tooltip {
-    bottom: -3.4em;
+.file-list-item-summary {
+	opacity: 1;
+}
+
+.file-list-item {
+	color: #777;
+}
+
+.file-list-item.active {
+	background-color: inherit;
+	color: black;
+}
+
+.ty-side-sort-btn.active {
+	background-color: inherit;
+}
+
+.file-list-item.active .file-list-item-file-name  {
+	font-weight: bold;
+}
+
+.file-list-item{
+    opacity:1 !important;
+}
+
+.file-library-node.active>.file-node-background{
+	background-color: rgba(32, 43, 51, 0.63);
+	background-color: var(--active-file-bg-color);
+}
+
+.file-tree-node.active>.file-node-content{
+	color: white;
+	color: var(--active-file-text-color);
+}
+
+.md-task-list-item>input {
+	margin-left: -1.7em;
+	margin-top: calc(1rem - 12px);
+	-webkit-appearance: button;
+}
+
+input {
+	border: 1px solid #aaa;
+}
+
+.megamenu-menu-header #megamenu-menu-header-title,
+.megamenu-menu-header:hover, 
+.megamenu-menu-header:focus {
+	color: inherit;
 }
 
 .dropdown-menu .divider {
 	border-color: #e5e5e5;
+	opacity: 1;
 }
 
-li {
-	margin: 0.5rem 0;
+/* https://github.com/typora/typora-issues/issues/2046 */
+.os-windows-7 strong,
+.os-windows-7 strong  {
+	font-weight: 760;
 }
 
-li > *:last-child {
-	margin-bottom: 0;
+.ty-preferences .btn-default {
+	background: transparent;
+}
+
+.ty-preferences .window-header {
+	border-bottom: 1px dashed #202B33;
+	box-shadow: none;
+}
+
+#sidebar-loading-template, #sidebar-loading-template.file-list-item {
+	color: #777;
+}
+
+.searchpanel-search-option-btn.active {
+	background: #777;
+	color: white;
+}
+
+.export-detail, .light .export-detail, 
+.light .export-item.active, 
+.light .export-items-list-control {
+	background: #e0e0e0;
+	border-radius: 2px;
+	font-weight: 700;
+	color: inherit
 }</style>
 <style type='text/css'  id="style-lp">ol, ul {padding-left: 40px}</style>
 <style type='text/css'  id="style-mac-print"> @media print { @page {margin: 0 0 0 0;} body.typora-export {padding-left: 0; padding-right: 0;} #write {padding:0;}}</style>
@@ -702,6 +824,7 @@ li > *:last-child {
 <title>Privacy Policy</title>
 </head>
 <body class='typora-export'><div class='typora-export-content'>
-<div id='write'  class=''><h1 id='privacy-policy'><span>Privacy Policy</span></h1><p><strong><span>Last Updated:</span></strong><span> May 9, 2026</span></p><p><strong><span>Effective Date:</span></strong><span> May 9, 2026</span></p><p><strong><span>Summary:</span></strong><span> We value your privacy. This Privacy Policy explains how we collect, use, store, share, and protect your personal information, as well as the rights you have when using the “Suva” mobile application (hereinafter referred to as the “App”) and related services.</span></p><h2 id='1-how-we-collect-and-use-personal-information'><span>1. How We Collect and Use Personal Information</span></h2><p><span>We process personal information only to the extent necessary to provide the following business functions. Any processing beyond such scope will be subject to your separate consent unless otherwise required by laws or administrative regulations.</span></p><h2 id='2-personal-information-involved-in-different-scenarios-based-on-current-product-features'><span>2. Personal Information Involved in Different Scenarios (Based on Current Product Features)</span></h2><figure class='table-figure'><table><thead><tr><th><span>Scenario / Purpose</span></th><th><span>Types of Personal Information Involved</span></th><th><span>Description</span></th></tr></thead><tbody><tr><td><span>Account Registration and Login</span></td><td><span>Account identifiers, login credentials (such as hashed passwords or server-managed tokens), IM-related user identifiers and authentication information (such as UserSig-like tokens)</span></td><td><span>Used to create sessions and maintain login status. Login requests may also include device environment information for risk control and security auditing purposes.</span></td></tr><tr><td><span>Account and Security</span></td><td><span>Session tokens, User ID</span></td><td><span>Used for API authentication and account association through request headers and other methods.</span></td></tr><tr><td><span>Device and Security Risk Control</span></td><td><span>Device identifiers (fields named Device ID / IMEI within the App), device model, operating system type and version, app version, distribution channel, time zone, system language/app language, country or region code</span></td><td><span>Used for account security, request signing, and fraud prevention. Android devices may upload device fingerprint-related information to the server, depending on implementation.</span></td></tr><tr><td><span>Risk Assessment Assistance</span></td><td><span>Whether a VPN is being used, whether the App is running in an emulator (if collected by server APIs)</span></td><td><span>Used for risk identification in login and personal information-related interfaces.</span></td></tr><tr><td><span>Instant Messaging (IM)</span></td><td><span>Account identifiers required by Tencent Cloud services, message and group relationship data, communication logs, and other technical data</span></td><td><span>Processed by the Tencent Cloud IM SDK provided by </span><strong><span>Tencent Cloud Computing (Beijing) Co., Ltd.</span></strong><span> to enable chat and group features.</span></td></tr><tr><td><span>Real-Time Voice (RTC)</span></td><td><span>Audio streams, room/streaming-related metadata</span></td><td><span>Processed by the real-time audio/video SDK provided by </span><strong><span>Zego Technology Co., Ltd.</span></strong><span> for voice room and related features. Microphone permission may be requested when necessary.</span></td></tr><tr><td><span>Profile and Content Upload</span></td><td><span>Images, avatars, and other files you voluntarily upload</span></td><td><span>Camera/photo library permissions may be used when selecting images. Images may be compressed before being uploaded to servers or object storage services, depending on implementation.</span></td></tr><tr><td><span>Built-in Browser / Activity Pages</span></td><td><span>Cookies, local storage, and information collected by third-party domains during webpage browsing</span></td><td><span>Processed by the operators of the corresponding webpages according to their own privacy policies. We may read basic browser information such as User-Agent for compatibility purposes.</span></td></tr><tr><td><span>Customer Service and Debugging</span></td><td><span>Contact information and communication records you provide when contacting us</span></td><td><span>Used for issue handling. The in-app support email address is </span><a href='mailto:suvasuva2025@gmail.com'><span>suvasuva2025@gmail.com</span></a><span>.</span></td></tr><tr><td><span>Account Deletion</span></td><td><span>Deletion requests and necessary account verification information</span></td><td><span>Used to process your account deletion request and retain records for the minimum legally required period.</span></td></tr></tbody></table></figure><h2 id='3-app-permissions-ios'><span>3. App Permissions (iOS)</span></h2><p><span>When you use corresponding features, we may request authorization through the system permission mechanism (which you may manage at any time in system settings):</span></p><ul><li><p><strong><span>Microphone:</span></strong><span> Used for voice rooms, real-time voice communication, and related features. Denying permission may result in such features being unavailable.</span></p></li><li><p><strong><span>Camera / Photo Library:</span></strong><span> Used for taking or selecting avatars, profile pictures, and related content (depending on implementation).</span></p></li><li><p><span>If future versions introduce new permission types, we will inform you of their purposes through permission prompts or explanatory notices before requesting authorization.</span></p></li></ul><h2 id='4-cookies-and-local-storage'><span>4. Cookies and Local Storage</span></h2><p><span>We may use local storage within the App (such as SharedPreferences or similar mechanisms) to store login status, configuration caches, and other data in order to improve user experience and security. Cookies used within embedded webpages are governed by the respective website policies.</span></p><h2 id='5-third-party-sdks--service-providers'><span>5. Third-Party SDKs / Service Providers</span></h2><p><span>To ensure service stability and security, we may integrate third-party SDKs or services. The following are the primary third-party services related to the App’s core technology stack (names and purposes are subject to official SDK documentation, and you are encouraged to retain copies of the relevant privacy policies):</span></p><ul><li><p><strong><span>Tencent Cloud IM SDK:</span></strong><span> Provides instant messaging capabilities.</span></p></li><li><p><strong><span>Zego Express SDK:</span></strong><span> Provides real-time audio and video capabilities.</span></p></li><li><p><strong><span>Network and Security:</span></strong><span> We may use encrypted transmission technologies (such as HTTPS), RSA/AES encryption, and request/response signing to prevent tampering and eavesdropping.</span></p></li></ul><p><span>We evaluate the security capabilities of third parties and require them to fulfill data processing obligations. Where third parties independently provide services to you, their own privacy policies shall apply.</span></p><h2 id='6-sharing-transfer-and-public-disclosure'><span>6. Sharing, Transfer, and Public Disclosure</span></h2><h3 id='61'><span>6.1</span></h3><p><span>We do not sell your personal information to unrelated third parties.</span></p><h3 id='62'><span>6.2</span></h3><p><span>We may share or disclose information under the following circumstances:</span></p><ul><li><p><span>With your separate consent;</span></p></li><li><p><span>To fulfill legal obligations or respond to lawful requests from judicial or administrative authorities;</span></p></li><li><p><span>With affiliates or entrusted data processors to the extent necessary to achieve the purposes described in this Policy;</span></p></li><li><p><span>In the event of mergers, divisions, asset transfers, or similar transactions involving personal information transfers, we will notify you as required by law and require the receiving party to continue being bound by this Policy.</span></p></li></ul><h2 id='7-retention-period'><span>7. Retention Period</span></h2><p><span>We retain personal information only for the period necessary to achieve the purposes described in this Policy, unless a longer retention period is required by law. After the retention period expires, we will delete or anonymize the information. Anonymized data may be used for statistical analysis.</span></p><h2 id='8-your-rights'><span>8. Your Rights</span></h2><p><span>To the extent permitted by applicable laws, you may exercise rights related to your personal information, including the right to access, copy, correct, delete, withdraw consent, delete your account, restrict processing, or object to processing.</span></p><p><span>You may delete your account through the in-app </span><strong><span>Account Deletion</span></strong><span> feature or contact us using the contact information provided at the end of this Policy.</span></p><p><span>We will respond within a reasonable period after verifying your identity, unless otherwise provided by laws or regulations.</span></p><h2 id='9-protection-of-minors'><span>9. Protection of Minors</span></h2><p><span>If you are a minor, please read this Policy and use our services under the supervision of your guardian. If we discover that we have collected a minor’s personal information without verifiable guardian consent, we will promptly delete or anonymize such information.</span></p><h2 id='10-information-security'><span>10. Information Security</span></h2><p><span>We adopt industry-standard administrative and technical measures (such as encrypted transmission, access control, and API request signing) to protect your information. However, please understand that the Internet is not an absolutely secure environment, and you are also responsible for properly safeguarding your credentials.</span></p><h2 id='11-updates-to-this-policy'><span>11. Updates to This Policy</span></h2><p><span>We may revise this Policy from time to time. Significant changes will be notified through in-app notices or other appropriate means. Continued use of the services indicates that you acknowledge and accept the updated Policy.</span></p><h2 id='12-contact-us'><span>12. Contact Us</span></h2><p><span>If you have any questions, complaints, or suggestions regarding this Policy or our processing of personal information, please contact us:</span></p><ul><li><p><span>Email: </span><a href='mailto:suvasuva2025@gmail.com'><span>suvasuva2025@gmail.com</span></a></p></li></ul><h2 id='13-governing-law'><span>13. Governing Law</span></h2><p><span>These Terms shall be governed by the laws and regulations of Cairo, Egypt. If the laws of your country conflict with this Agreement or applicable consumer protection requirements, Section 13 shall not apply to you.</span></p></div></div>
+<div id='write'  class=''><h1 id='privacy-policy'><span>Privacy Policy</span></h1><p><strong><span>Updated Date:</span></strong><span> May 9, 2026</span>
+<strong><span>Effective Date:</span></strong><span> May 9, 2026</span></p><p><strong><span>Summary:</span></strong><span> We value your privacy. This Privacy Policy explains how we collect, use, store, share, and protect your personal information when you use the “Suva” mobile application (the “App”) and related services, as well as the rights you may have regarding your personal information.</span></p><h2 id='1-how-we-collect-and-use-personal-information'><span>1. How We Collect and Use Personal Information</span></h2><p><span>We process personal information only to the extent necessary to provide the following business functions. Any processing beyond such scope will be subject to your separate consent, unless otherwise required by applicable laws or regulations.</span></p><h2 id='2-personal-information-involved-in-different-scenarios'><span>2. Personal Information Involved in Different Scenarios</span></h2><figure class='table-figure'><table><thead><tr><th><span>Scenario / Purpose</span></th><th><span>Types of Personal Information Potentially Involved</span></th><th><span>Description</span></th></tr></thead><tbody><tr><td><span>Account Registration and Login</span></td><td><span>Account identifiers, login credentials (such as password hashes or server-managed tokens), user identifiers and authentication information related to instant messaging services (such as UserSig-like tokens)</span></td><td><span>Used to create sessions and maintain login status. Login requests may include device environment information for risk control and security auditing.</span></td></tr><tr><td><span>Account and Security</span></td><td><span>Session tokens, user IDs</span></td><td><span>Used for API authentication and account association through request headers or similar methods.</span></td></tr><tr><td><span>Device and Security Risk Control</span></td><td><span>Device identifiers (such as Device ID / IMEI fields within the App), device model, operating system type and version, app version, distribution channel, timezone, system language/app language, country or region code</span></td><td><span>Used to protect account security, API signing, and fraud prevention. Android devices may upload device fingerprint-related information to the server depending on implementation.</span></td></tr><tr><td><span>Risk Assessment Assistance</span></td><td><span>Whether a VPN is being used, whether the App is running on an emulator (if collected by server APIs)</span></td><td><span>Used for login and profile-related risk analysis, depending on implementation.</span></td></tr><tr><td><span>Instant Messaging (IM)</span></td><td><span>Account identifiers required by Tencent Cloud services, message and group relationship data, communication logs, and other technical data</span></td><td><span>Processed by the Tencent Cloud IM SDK provided by Tencent Cloud Computing (Beijing) Co., Ltd. for messaging and group communication features.</span></td></tr><tr><td><span>Real-Time Voice Communication (RTC)</span></td><td><span>Audio streams and streaming-related metadata</span></td><td><span>Processed by the Zego real-time audio/video SDK provided by ZEGO Technology Co., Ltd. for voice communication features. The App may request microphone permission when necessary.</span></td></tr><tr><td><span>Profile and Content Uploads</span></td><td><span>Images, avatars, and other files voluntarily selected by you</span></td><td><span>The App may request photo library access when selecting images. Images may be compressed before being uploaded to servers or object storage, depending on implementation.</span></td></tr><tr><td><span>Built-in Browser / Event Pages</span></td><td><span>Cookies, local storage, and information collected by third-party domains during webpage browsing</span></td><td><span>Such information is handled by the corresponding webpage operators under their own privacy policies. We may access basic browser information such as User-Agent strings for compatibility purposes.</span></td></tr><tr><td><span>Customer Service and Debugging</span></td><td><span>Contact information and communication records provided when contacting us</span></td><td><span>Used to handle inquiries and issues. The configured contact email is </span><a href='mailto:suvasuva2025@gmail.com'><span>suvasuva2025@gmail.com</span></a><span>.</span></td></tr><tr><td><span>Account Deletion</span></td><td><span>Account deletion requests and necessary account verification information</span></td><td><span>Used to process account deletion requests and retain legally required records for the minimum required period.</span></td></tr></tbody></table></figure><h2 id='3-app-permissions-ios'><span>3. App Permissions (iOS)</span></h2><p><span>We request permissions through the system authorization mechanism only when you use the corresponding features. You may manage permissions at any time through your device settings.</span></p><ul><li><p><strong><span>Microphone:</span></strong><span> Used for voice communication features. Denying permission may result in certain functions becoming unavailable.</span></p></li><li><p><strong><span>Photo Library:</span></strong><span> Used for selecting avatars, profile images, and similar content, depending on implementation.</span></p></li><li><p><span>If future versions require additional permissions, we will explain the purpose before requesting authorization.</span></p></li></ul><h2 id='4-cookies-and-local-storage'><span>4. Cookies and Local Storage</span></h2><p><span>We may use local storage mechanisms (such as SharedPreferences or similar technologies) within the App to save login status, configuration caches, and related data in order to improve user experience and security. Cookies used in embedded webpages are governed by the policies of the corresponding websites.</span></p><h2 id='5-third-party-sdks-and-service-providers'><span>5. Third-Party SDKs and Service Providers</span></h2><p><span>To ensure functionality, stability, and security, we may integrate third-party SDKs or services. The following are major third-party providers related to the App’s core technology stack. Processing purposes are subject to the official SDK documentation and corresponding privacy policies.</span></p><ul><li><p><strong><span>Tencent Cloud IM SDK:</span></strong><span> Provides instant messaging capabilities.</span></p></li><li><p><strong><span>Zego Express SDK:</span></strong><span> Provides real-time audio and video communication capabilities.</span></p></li><li><p><strong><span>Network and Security:</span></strong><span> We may use encrypted transmission technologies such as HTTPS and encryption/signature mechanisms such as RSA/AES to protect requests and responses from tampering or interception.</span></p></li></ul><p><span>We evaluate the security capabilities of third-party providers and require them to fulfill data protection obligations. When third parties independently provide services to you, your information will be processed according to their own privacy policies.</span></p><h2 id='6-sharing-transfer-and-public-disclosure'><span>6. Sharing, Transfer, and Public Disclosure</span></h2><p><span>6.1 We do not sell your personal information to unrelated third parties.</span></p><p><span>6.2 We may share or disclose information under the following circumstances:</span></p><ul><li><p><span>With your separate consent;</span></p></li><li><p><span>To fulfill legal obligations or respond to lawful requests from judicial or administrative authorities;</span></p></li><li><p><span>With affiliated companies or entrusted processors within the scope necessary to achieve the purposes described in this Policy;</span></p></li><li><p><span>In connection with mergers, divisions, asset transfers, or similar transactions involving personal information transfers, in which case we will notify you as required by law and require recipients to continue being bound by this Policy.</span></p></li></ul><h2 id='7-retention-period'><span>7. Retention Period</span></h2><p><span>We retain personal information only for as long as necessary to fulfill the purposes described in this Policy, unless a longer retention period is required by law. After the retention period expires, we will delete or anonymize the information. Anonymized data may be used for statistical analysis.</span></p><h2 id='8-your-rights'><span>8. Your Rights</span></h2><p><span>To the extent permitted by applicable law, you may exercise rights regarding your personal information, including the rights to access, copy, correct, delete, withdraw consent, delete your account, restrict or object to processing.</span></p><p><span>You may delete your account through features such as the in-app account deletion function or contact us using the contact information provided at the end of this Policy.</span></p><p><span>We will respond within a reasonable period after verifying your identity, unless otherwise required by law.</span></p><h2 id='9-protection-of-minors'><span>9. Protection of Minors</span></h2><p><span>If you are a minor, please read this Policy and use the Services under the guidance of your legal guardian. If we discover that personal information of minors has been collected without verifiable guardian consent, we will promptly delete or anonymize such information in accordance with applicable law.</span></p><h2 id='10-information-security'><span>10. Information Security</span></h2><p><span>We implement industry-standard administrative and technical measures, such as encrypted transmission, access control, and API signature mechanisms, to protect your information. However, please understand that the internet is not an absolutely secure environment, and you should also properly safeguard your credentials.</span></p><h2 id='11-updates-to-this-policy'><span>11. Updates to This Policy</span></h2><p><span>We may revise this Policy from time to time. Material changes will be notified through in-app notices or other appropriate methods. Your continued use of the Services indicates that you acknowledge and accept the updated Policy.</span></p><h2 id='12-contact-us'><span>12. Contact Us</span></h2><p><span>If you have any questions, complaints, or suggestions regarding this Policy or our handling of personal information, please contact us:</span></p><ul><li><p><span>Email: </span><a href='mailto:suvasuva2025@gmail.com'><span>suvasuva2025@gmail.com</span></a></p></li></ul></div></div>
 </body>
 </html>
