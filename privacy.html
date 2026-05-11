@@ -224,403 +224,484 @@ mjx-container { break-inside: avoid; }
 .md-alert-text-container::after { content: attr(data-text); text-transform: capitalize; pointer-events: none; margin-right: 1ch; }
 
 </style>
-<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&amp;subset=latin,latin-ext' type='text/css' />
-<style type='text/css'  id="style-theme_css">:root {
-    --side-bar-bg-color: #fafafa;
-    --control-text-color: #777;
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Merriweather:900,900italic,300,300italic&amp;subset=latin-ext' type='text/css' />
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Lato:900,300&amp;subset=latin-ext' type='text/css' />
+<style type='text/css'  id="style-theme_css">@include-when-export url(https://fonts.googleapis.com/css?family=Merriweather:900,900italic,300,300italic&subset=latin-ext);
+@include-when-export url(https://fonts.googleapis.com/css?family=Lato:900,300&subset=latin-ext);
+
+:root {
+	--control-text-color: #777;
 }
 
-@include-when-export url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+/**
+ * forked from pixyll.com
+ * MIT license
+ */
 
-/* open-sans-regular - latin-ext_latin */
-  /* open-sans-italic - latin-ext_latin */
-    /* open-sans-700 - latin-ext_latin */
-    /* open-sans-700italic - latin-ext_latin */
-  html {
-    font-size: 16px;
-    -webkit-font-smoothing: antialiased;
+h1,
+.h1,
+.f1 {
+	font-size: 2rem;
+	line-height: 2.5rem;
 }
+h2,
+.h2,
+.f2 {
+	font-size: 1.5rem;
+	line-height: 2rem;
+}
+h3,
+.h3,
+.f3 {
+	font-size: 1.25rem;
+	line-height: 1.5rem;
+}
+p,
+.p,
+.f4,
+h4,
+h5,
+h6,
+dl,
+ol,
+ul,
+pre[cid],
+div[cid],
+#typora-source {
+	font-size: 1.125rem;
+	line-height: 1.5rem;
+}
+
+h4 {
+	font-size: 1.13rem;
+}
+/*
+ Pixyll
+ A simple, beautiful theme for Jekyll that emphasizes content rather than aesthetic fluff.
+ Best served with BASSCSS (http://jxnblk.github.io/basscss)
+ Crafted with <3 by John Otander (@4lpine) - ©2015 John Otander MIT License http://opensource.org/licenses/MIT
+
+*/
 
 body {
-    font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, 'Segoe UI Emoji', 'SF Pro', sans-serif;
-    color: rgb(51, 51, 51);
-    line-height: 1.6;
+	font-family: "Merriweather", "PT Serif", Georgia, "Times New Roman", "STSong", 'Segoe UI Emoji','SF Pro', Serif;
+	line-height: 1.5rem;
+	font-weight: 400;
 }
 
 #write {
-    max-width: 860px;
-  	margin: 0 auto;
-  	padding: 30px;
-    padding-bottom: 100px;
+	max-width: 914px;
+	color: #333;
 }
 
 @media only screen and (min-width: 1400px) {
 	#write {
-		max-width: 1024px;
+		max-width: 1100px;
 	}
 }
 
-@media only screen and (min-width: 1800px) {
+@media only screen and (min-width: 1700px) {
 	#write {
 		max-width: 1200px;
 	}
 }
 
-#write > ul:first-child,
-#write > ol:first-child{
-    margin-top: 30px;
+img {
+	width: auto;
+	max-width: 100%;
+}
+body {
+	font-size: 1.5rem;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
 }
 
-a {
-    color: #4183C4;
+.ty-table-edit {
+	background: #ededed;
+}
+
+table {
+	width: 100%;
+	font-size: 1.125rem;
+}
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td,
+table > tfoot > tr > th,
+table > tfoot > tr > td {
+	padding: 12px;
+	line-height: 1.2;
+	vertical-align: top;
+	border-top: 1px solid #333;
+}
+table > thead > tr > th {
+	vertical-align: bottom;
+	border-bottom: 2px solid #333;
+}
+table > caption + thead > tr:first-child > th,
+table > caption + thead > tr:first-child > td,
+table > colgroup + thead > tr:first-child > th,
+table > colgroup + thead > tr:first-child > td,
+table > thead:first-child > tr:first-child > th,
+table > thead:first-child > tr:first-child > td {
+	border-top: 0;
+}
+table > tbody + tbody {
+	border-top: 2px solid #333;
+}
+p {
+	font-weight: 300;
+	line-height: 1.5;
+}
+abbr {
+	border-bottom: 1px black dotted;
+	cursor: help;
+}
+pre,
+code {
+	font-family: Menlo, Monaco, "Courier New", monospace;
+}
+
+code,
+.md-fences  {
+	color: #7a7a7a;
+}
+
+.md-fences {
+	padding: 1.125em;
+	margin-bottom: 0.88em;
+	font-size: 1rem;
+	border: 1px solid #7a7a7a;
+	padding-bottom: 0.5rem;
+	padding-top: 0.5rem;
+}
+
+blockquote {
+	padding: 1.33em;
+	font-style: italic;
+	border-left: 5px solid #7a7a7a;
+	color: #555;
+}
+blockquote em {
+	color: #000;
+}
+blockquote footer {
+	font-size: .85rem;
+	font-style: normal;
+	background-color: #fff;
+	color: #7a7a7a;
+	border-color: transparent;
 }
 h1,
+.h1,
 h2,
+.h2,
 h3,
+.h3,
 h4,
+.h4,
 h5,
-h6 {
-    position: relative;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    font-weight: bold;
-    line-height: 1.4;
-    cursor: text;
+.h5,
+h6,
+.h6 {
+	font-family: "Lato", 'Helvetica Neue', Helvetica, sans-serif;
+	font-weight: bold;
+	line-height: 1.2;
+	margin: 1em 0 0.5em;
 }
-h1:hover a.anchor,
-h2:hover a.anchor,
-h3:hover a.anchor,
-h4:hover a.anchor,
-h5:hover a.anchor,
-h6:hover a.anchor {
-    text-decoration: none;
+@media screen and (min-width: 48em) {
+	.h1,
+	h1 {
+		font-size: 3.250rem;
+	}
+	.h2,
+	h2 {
+		font-size: 2.298rem;
+	}
+	.h3,
+	h3 {
+		font-size: 1.625rem;
+	}
+	.h4,
+	h4 {
+		font-size: 1.3rem;
+	}
+	#write>h4.md-focus:before,
+	#write>h5.md-focus:before,
+	#write>h6.md-focus:before{
+		top: 1px;
+	}
+	.p,
+	p,
+	li {
+		font-size: 1.25rem;
+		line-height: 1.8;
+	}
+	table {
+		font-size: 1.25rem;
+	}
 }
-h1 tt,
-h1 code {
-    font-size: inherit;
+@media (max-width: 48em) {
+	blockquote {
+		margin-left: 1rem;
+		margin-right: 0;
+		padding: 0.5em;
+	}
+	.h1,
+	h1 {
+		font-size: 2.827rem;
+	}
+	.h2,
+	h2 {
+		font-size: 1.999rem;
+	}
+	.h3,
+	h3 {
+		font-size: 1.413rem;
+	}
+	.h4,
+	h4 {
+		font-size: 1.3rem;
+	}
 }
-h2 tt,
-h2 code {
-    font-size: inherit;
+@media screen and (min-width: 64em) {
+	.h1,
+	h1 {
+		font-size: 4.498rem;
+	}
+	.h2,
+	h2 {
+		font-size: 2.29rem;
+	}
+	.h3,
+	h3 {
+		font-size: 1.9rem;
+	}
+	.h4,
+	h4 {
+		font-size: 1.591rem;
+	}
+	#write>h4.md-focus:before{
+		top:4px;
+	}
 }
-h3 tt,
-h3 code {
-    font-size: inherit;
-}
-h4 tt,
-h4 code {
-    font-size: inherit;
-}
-h5 tt,
-h5 code {
-    font-size: inherit;
-}
-h6 tt,
-h6 code {
-    font-size: inherit;
-}
-h1 {
-    font-size: 2.25em;
-    line-height: 1.2;
-    border-bottom: 1px solid #eee;
-}
-h2 {
-    font-size: 1.75em;
-    line-height: 1.225;
-    border-bottom: 1px solid #eee;
-}
-
-/*@media print {
-    .typora-export h1,
-    .typora-export h2 {
-        border-bottom: none;
-        padding-bottom: initial;
-    }
-
-    .typora-export h1::after,
-    .typora-export h2::after {
-        content: "";
-        display: block;
-        height: 100px;
-        margin-top: -96px;
-        border-top: 1px solid #eee;
-    }
-}*/
-
-h3 {
-    font-size: 1.5em;
-    line-height: 1.43;
-}
-h4 {
-    font-size: 1.25em;
-}
-h5 {
-    font-size: 1em;
-}
-h6 {
-   font-size: 1em;
-    color: #777;
-}
-p,
-blockquote,
-ul,
-ol,
-dl,
-table{
-    margin: 0.8em 0;
-}
-li>ol,
-li>ul {
-    margin: 0 0;
-}
-hr {
-    height: 2px;
-    padding: 0;
-    margin: 16px 0;
-    background-color: #e7e7e7;
-    border: 0 none;
-    overflow: hidden;
-    box-sizing: content-box;
+a {
+	color: #463F5C;
+	text-decoration: underline;
 }
 
-li p.first {
-    display: inline-block;
-}
-ul,
-ol {
-    padding-left: 30px;
-}
-ul:first-child,
-ol:first-child {
-    margin-top: 0;
-}
-ul:last-child,
-ol:last-child {
-    margin-bottom: 0;
-}
-blockquote {
-    border-left: 4px solid #dfe2e5;
-    padding: 0 15px;
-    color: #777777;
-}
-blockquote blockquote {
-    padding-right: 0;
-}
-table {
-    padding: 0;
-    word-break: initial;
-}
-table tr {
-    border: 1px solid #dfe2e5;
-    margin: 0;
-    padding: 0;
-}
-table tr:nth-child(2n),
-thead {
-    background-color: #f8f8f8;
-}
-table th {
-    font-weight: bold;
-    border: 1px solid #dfe2e5;
-    border-bottom: 0;
-    margin: 0;
-    padding: 6px 13px;
-}
-table td {
-    border: 1px solid #dfe2e5;
-    margin: 0;
-    padding: 6px 13px;
-}
-table th:first-child,
-table td:first-child {
-    margin-top: 0;
-}
-table th:last-child,
-table td:last-child {
-    margin-bottom: 0;
+#write {
+	padding-top: 2rem;
 }
 
-.CodeMirror-lines {
-    padding-left: 4px;
-}
-
-.code-tooltip {
-    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
-    border-top: 1px solid #eef2f2;
-}
-
-.md-fences,
-code,
-tt {
-    border: 1px solid #e7eaed;
-    background-color: #f8f8f8;
-    border-radius: 3px;
-    padding: 0;
-    padding: 2px 4px 0px 4px;
-    font-size: 0.9em;
-}
-
-code {
-    background-color: #f3f4f4;
-    padding: 0 2px 0 2px;
-}
-
-.md-fences {
-    margin-bottom: 15px;
-    margin-top: 15px;
-    padding-top: 8px;
-    padding-bottom: 6px;
-}
-
-
-.md-task-list-item > input {
-  margin-left: -1.3em;
-}
-
-@media print {
-    html {
-        font-size: 13px;
-    }
-    pre {
-        page-break-inside: avoid;
-        word-wrap: break-word;
-    }
-}
-
-.md-fences {
-	background-color: #f8f8f8;
-}
 #write pre.md-meta-block {
-	padding: 1rem;
-    font-size: 85%;
-    line-height: 1.45;
-    background-color: #f7f7f7;
-    border: 0;
-    border-radius: 3px;
-    color: #777777;
-    margin-top: 0 !important;
-}
+	min-height: 35px;
+	padding: 0.5em 1em;
+	white-space: pre;
+	border: 0px;
 
-.mathjax-block>.code-tooltip {
-	bottom: .375rem;
-}
+	border-left: 30px #f8f8f8 solid;
+	border-right: 30px #f8f8f8 solid;
+	width: 100vw;
+	max-width: calc(100% + 60px);
 
-.md-mathjax-midline {
-    background: #fafafa;
-}
-
-#write>h3.md-focus:before{
-	left: -1.5625rem;
-	top: .375rem;
-}
-#write>h4.md-focus:before{
-	left: -1.5625rem;
-	top: .285714286rem;
-}
-#write>h5.md-focus:before{
-	left: -1.5625rem;
-	top: .285714286rem;
-}
-#write>h6.md-focus:before{
-	left: -1.5625rem;
-	top: .285714286rem;
+	margin-left: -30px;
+	margin-bottom: 2em;
+	margin-top: -2010px;
+	padding-top: 2000px;
+	padding-bottom: 10px;
+	line-height: 1.5em;
+	color: #7a7a7a;
+	background-color: #fafafa;
+	font-family: 'Lato', 'Helvetica Neue', Helvetica, sans-serif;
+	font-weight: 300;
+	clear: both;
+	padding-left: 0;
+	font-size:1.125rem;
 }
 .md-image>.md-meta {
-    /*border: 1px solid #ddd;*/
-    border-radius: 3px;
-    padding: 2px 0px 0px 4px;
-    font-size: 0.9em;
-    color: inherit;
+	color: #463F5C
+}
+.footnotes {
+	font-size:1.1rem;
+}
+.md-tag {
+	font-family: 'Lato', 'Helvetica Neue', Helvetica, sans-serif;
+}
+.code-tooltip {
+	background: white;
+}
+.code-tooltip-content {
+	font-size: 1.1rem;
+}
+
+.task-list{
+	padding-left: 0;
+}
+
+.md-task-list-item {
+	padding-left:34px;
+}
+
+.md-task-list-item > input{
+	width: 1.25rem;
+	height: 1.25rem;
+	display: block;
+	-webkit-appearance: initial;
+	top: -0.2rem;
+	margin-left: -1.6em;
+	margin-top: calc(1rem - 7px);
+	border: none;
+}
+
+.md-task-list-item > input:focus{
+	outline: none;
+	box-shadow: none;
+}
+
+.md-task-list-item > input:before{
+	border: 1px solid #555;
+	border-radius: 1.5rem;
+	width: 1.5rem;
+	height: 1.5rem;
+	background: #fff;
+	content: ' ';
+	transition: background-color 200ms ease-in-out;
+	display: block;
+}
+
+.md-task-list-item > input:checked:before,
+.md-task-list-item > input[checked]:before{
+	background: #333;
+	border-width: 2px;
+	display:inline-block;
+	transition: background-color 200ms ease-in-out;
+}
+
+.md-task-list-item > input:checked:after,
+.md-task-list-item > input[checked]:after {
+	opacity: 1;
+}
+
+.md-task-list-item > input:after {
+	opacity: 1;
+	-webkit-transition: opacity 0.05s ease-in-out;
+	-moz-transition: opacity 0.05s ease-in-out;
+	transition: opacity 0.05s ease-in-out;
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+	position: absolute;
+	top: 0.4375rem;
+	left: 0.28125rem;
+	width: 0.9375rem;
+	height: 0.5rem;
+	border: 3px solid #fff;
+	border-top: 0;
+	border-right: 0;
+	content: ' ';
+	opacity: 0;
 }
 
 .md-tag {
-    color: #a7a7a7;
-    opacity: 1;
+	color:inherit;
 }
 
-.md-toc { 
-    margin-top:20px;
-    padding-bottom:20px;
+.md-toc:focus .md-toc-content{
+	margin-top: 19px;
 }
 
-.sidebar-tabs {
-    border-bottom: none;
+#typora-sidebar {
+	font-size:1rem !important;
 }
 
-#typora-quick-open {
-    border: 1px solid #ddd;
-    background-color: #f8f8f8;
+.html-for-mac #typora-sidebar {
+	background-color:white;
 }
 
-#typora-quick-open-item {
-    background-color: #FAFAFA;
-    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
-    border-style: solid;
-    border-width: 1px;
+.outline-content li, .outline-content ul {
+	font-size:1rem !important;
 }
 
-/** focus mode */
-.on-focus-mode blockquote {
-    border-left-color: rgba(85, 85, 85, 0.12);
+.outline-title {
+	line-height: inherit;
+	margin-top: 10px;
 }
 
-header, .context-menu, .megamenu-content, footer{
-    font-family: "Segoe UI", "Arial", sans-serif;
+.outline-expander {
+	width: 18px;
 }
 
-.file-node-content:hover .file-node-icon,
-.file-node-content:hover .file-node-open-state{
-    visibility: visible;
+.outline-expander:before {
+ 	content: "+";
+	font-family: inherit;
+	color: rgb(108, 108, 108); 
+  font-size: 1.5rem;
+ 	top: -0.1rem;
 }
 
-.mac-seamless-mode #typora-sidebar {
-    background-color: #fafafa;
-    background-color: var(--side-bar-bg-color);
+.outline-expander:hover:before {
+	content: "+";
 }
 
-.mac-os #write{
-    caret-color: AccentColor;
+.outline-item-open>.outline-item>.outline-expander:before{
+	content: "-";
 }
 
-.md-lang {
-    color: #b4654d;
+/** source code mode */
+#typora-source {
+	font-family: Courier, monospace;
+    color: #6A6A6A;
 }
 
-/*.html-for-mac {
-    --item-hover-bg-color: #E6F0FE;
-}*/
+.os-windows #typora-source {
+	font-family: inherit;
+}
 
-#md-notification .btn {
-    border: 0;
+.cm-s-typora-default .cm-header, 
+.cm-s-typora-default .cm-property,
+.CodeMirror.cm-s-typora-default div.CodeMirror-cursor {
+	color: #428bca;
+}
+
+.cm-s-typora-default .cm-atom, .cm-s-typora-default .cm-number {
+	color: #777777;
+}
+
+.md-diagram-panel {
+	margin-top: 24px;
+	margin-left: -1.2em;
+}
+
+.md-mathjax-midline {
+	background: #fafafa;
+}
+
+.enable-diagrams pre.md-fences[lang="sequence"] .code-tooltip,
+.enable-diagrams pre.md-fences[lang="flow"] .code-tooltip,
+.enable-diagrams pre.md-fences[lang="mermaid"] .code-tooltip {
+    bottom: -3.4em;
 }
 
 .dropdown-menu .divider {
-    border-color: #e5e5e5;
-    opacity: 0.4;
+	border-color: #e5e5e5;
 }
 
-.ty-preferences .window-content {
-    background-color: #fafafa;
+li {
+	margin: 0.5rem 0;
 }
 
-.ty-preferences .nav-group-item.active {
-    color: white;
-    background: #999;
-}
-
-.menu-item-container a.menu-style-btn {
-    background-color: #f5f8fa;
-    background-image: linear-gradient( 180deg , hsla(0, 0%, 100%, 0.8), hsla(0, 0%, 100%, 0)); 
-}
-</style>
+li > *:last-child {
+	margin-bottom: 0;
+}</style>
 <style type='text/css'  id="style-lp">ol, ul {padding-left: 40px}</style>
 <style type='text/css'  id="style-mac-print"> @media print { @page {margin: 0 0 0 0;} body.typora-export {padding-left: 0; padding-right: 0;} #write {padding:0;}}</style>
 
 <title>Privacy Policy</title>
 </head>
 <body class='typora-export'><div class='typora-export-content'>
-<div id='write'  class=''><h1 id='privacy-policy'><span>Privacy Policy</span></h1><p><strong><span>Last Updated: May 9, 2026</span></strong></p><p><span>Welcome to Suva (“the App”, “we”, “us”, or “our”).</span></p><p><span>We highly value your privacy and the protection of your personal information.</span>
-<span>This Privacy Policy explains how we collect, use, store, and protect your information, as well as the rights you may have regarding your data.</span></p><p><span>By using this App, you acknowledge that you have read and agreed to this Privacy Policy.</span></p><hr /><h1 id='1-information-we-collect'><span>1. Information We Collect</span></h1><p><span>When you use the App, we may collect the following information:</span></p><h2 id='11-information-you-provide-voluntarily'><span>1.1 Information You Provide Voluntarily</span></h2><p><span>Including but not limited to:</span></p><ul><li><p><span>Username or nickname</span></p></li><li><p><span>Profile picture</span></p></li><li><p><span>Email address</span></p></li><li><p><span>Login information</span></p></li><li><p><span>Text, images, or other content you post</span></p></li><li><p><span>Information related to your interactions with other users</span></p></li></ul><hr /><h2 id='12-information-collected-automatically'><span>1.2 Information Collected Automatically</span></h2><p><span>To ensure the normal operation of our services, we may automatically collect:</span></p><ul><li><p><span>Device model</span></p></li><li><p><span>Operating system version</span></p></li><li><p><span>IP address</span></p></li><li><p><span>Network status</span></p></li><li><p><span>App version</span></p></li><li><p><span>Log information</span></p></li><li><p><span>Crash reports</span></p></li></ul><hr /><h2 id='13-permission-related-information'><span>1.3 Permission-Related Information</span></h2><p><span>Depending on the features you use, the App may request the following permissions:</span></p><h3 id='microphone-permission'><span>Microphone Permission</span></h3><p><span>Used for voice chat, voice room interactions, and related features.</span></p><h3 id='storage-permission'><span>Storage Permission</span></h3><p><span>Used for uploading profile pictures, images, or saving content.</span></p><p><span>You may disable these permissions in your device settings; however, some features may not function properly.</span></p><hr /><h1 id='2-how-we-use-your-information'><span>2. How We Use Your Information</span></h1><p><span>The information we collect may be used to:</span></p><ul><li><p><span>Provide and maintain services</span></p></li><li><p><span>Create and manage user accounts</span></p></li><li><p><span>Enable chat and interaction features</span></p></li><li><p><span>Improve user experience</span></p></li><li><p><span>Handle reports and violations</span></p></li><li><p><span>Prevent fraud, abuse, and security risks</span></p></li><li><p><span>Comply with legal obligations</span></p></li></ul><hr /><h1 id='3-user-content-and-public-information'><span>3. User Content and Public Information</span></h1><p><span>Content you post in public rooms, comment sections, or chat rooms may be visible to other users.</span></p><p><span>Please use caution when sharing personal or sensitive information.</span></p><hr /><h1 id='4-information-sharing-and-disclosure'><span>4. Information Sharing and Disclosure</span></h1><p><span>We do not sell your personal information.</span></p><p><span>We may share your information only under the following circumstances:</span></p><ul><li><p><span>With your explicit consent</span></p></li><li><p><span>When necessary to provide services</span></p></li><li><p><span>To comply with legal obligations</span></p></li><li><p><span>To protect the safety of users or the platform</span></p></li><li><p><span>With service providers that support our infrastructure (such as cloud or messaging services)</span></p></li></ul><p><span>Such partners may only use your information within the scope necessary to provide services.</span></p><hr /><h1 id='5-data-storage-and-security'><span>5. Data Storage and Security</span></h1><p><span>We implement reasonable technical and organizational measures to protect your information, including:</span></p><ul><li><p><span>Data encryption</span></p></li><li><p><span>Access control</span></p></li><li><p><span>Security audits</span></p></li><li><p><span>Risk monitoring</span></p></li></ul><p><span>However, please understand that no method of internet transmission can guarantee absolute security.</span></p><hr /><h1 id='6-protection-of-minors'><span>6. Protection of Minors</span></h1><p><span>This App is not intended for children under the age of 13.</span></p><p><span>If we discover that a minor has provided personal information without guardian consent, we may delete such information.</span></p><hr /><h1 id='7-your-rights'><span>7. Your Rights</span></h1><p><span>You have the right to:</span></p><ul><li><p><span>Access your personal information</span></p></li><li><p><span>Modify your profile information</span></p></li><li><p><span>Delete certain content</span></p></li><li><p><span>Delete your account</span></p></li><li><p><span>Withdraw granted permissions</span></p></li></ul><p><span>You may exercise these rights through the App settings or by contacting us.</span></p><hr /><h1 id='8-account-deletion'><span>8. Account Deletion</span></h1><p><span>You may request to delete your account.</span></p><p><span>After account deletion:</span></p><ul><li><p><span>Your account cannot be restored</span></p></li><li><p><span>Certain data may be retained as required by law</span></p></li><li><p><span>Public content may not be removed immediately</span></p></li></ul><hr /><h1 id='9-third-party-services'><span>9. Third-Party Services</span></h1><p><span>The App may use third-party services, including but not limited to:</span></p><ul><li><p><span>Cloud storage services</span></p></li><li><p><span>Push notification services</span></p></li><li><p><span>Audio RTC services</span></p></li></ul><p><span>Third-party providers may process related information according to their own privacy policies.</span></p><hr /><h1 id='10-updates-to-this-privacy-policy'><span>10. Updates to This Privacy Policy</span></h1><p><span>We may update this Privacy Policy based on business changes or legal requirements.</span></p><p><span>Updated versions will be published within the App.</span>
-<span>Your continued use of the App indicates your acceptance of the updated policy.</span></p><hr /><h1 id='11-contact-us'><span>11. Contact Us</span></h1><p><span>If you have any questions regarding this Privacy Policy, please contact us:</span></p><p><span>Email: </span><a href='mailto:suvasuva2025@gmail.com'><span>suvasuva2025@gmail.com</span></a></p><hr /><h1 id='12-apple-app-store-privacy-disclosure'><span>12. Apple App Store Privacy Disclosure</span></h1><p><span>In accordance with Apple App Store requirements:</span></p><ul><li><p><span>We collect only the information necessary to provide services</span></p></li><li><p><span>We do not sell personal data without user consent</span></p></li><li><p><span>Users may request deletion of their accounts and related data at any time</span></p></li><li><p><span>Users may manage permission access through system settings</span></p></li></ul><hr /><h1 id='13-governing-law'><span>13. Governing Law</span></h1><p><span>These Terms shall be governed by the laws and regulations of Egypt/Cairo.</span></p><p><span>If the laws or consumer protection regulations in your country conflict with this section, Section 13 may not apply to you.</span></p><p><span>These Terms take effect on May 9, 2026.</span></p></div></div>
+<div id='write'  class=''><h1 id='privacy-policy'><span>Privacy Policy</span></h1><p><strong><span>Last Updated:</span></strong><span> May 9, 2026</span></p><p><strong><span>Effective Date:</span></strong><span> May 9, 2026</span></p><p><strong><span>Summary:</span></strong><span> We value your privacy. This Privacy Policy explains how we collect, use, store, share, and protect your personal information, as well as the rights you have when using the “Suva” mobile application (hereinafter referred to as the “App”) and related services.</span></p><h2 id='1-how-we-collect-and-use-personal-information'><span>1. How We Collect and Use Personal Information</span></h2><p><span>We process personal information only to the extent necessary to provide the following business functions. Any processing beyond such scope will be subject to your separate consent unless otherwise required by laws or administrative regulations.</span></p><h2 id='2-personal-information-involved-in-different-scenarios-based-on-current-product-features'><span>2. Personal Information Involved in Different Scenarios (Based on Current Product Features)</span></h2><figure class='table-figure'><table><thead><tr><th><span>Scenario / Purpose</span></th><th><span>Types of Personal Information Involved</span></th><th><span>Description</span></th></tr></thead><tbody><tr><td><span>Account Registration and Login</span></td><td><span>Account identifiers, login credentials (such as hashed passwords or server-managed tokens), IM-related user identifiers and authentication information (such as UserSig-like tokens)</span></td><td><span>Used to create sessions and maintain login status. Login requests may also include device environment information for risk control and security auditing purposes.</span></td></tr><tr><td><span>Account and Security</span></td><td><span>Session tokens, User ID</span></td><td><span>Used for API authentication and account association through request headers and other methods.</span></td></tr><tr><td><span>Device and Security Risk Control</span></td><td><span>Device identifiers (fields named Device ID / IMEI within the App), device model, operating system type and version, app version, distribution channel, time zone, system language/app language, country or region code</span></td><td><span>Used for account security, request signing, and fraud prevention. Android devices may upload device fingerprint-related information to the server, depending on implementation.</span></td></tr><tr><td><span>Risk Assessment Assistance</span></td><td><span>Whether a VPN is being used, whether the App is running in an emulator (if collected by server APIs)</span></td><td><span>Used for risk identification in login and personal information-related interfaces.</span></td></tr><tr><td><span>Instant Messaging (IM)</span></td><td><span>Account identifiers required by Tencent Cloud services, message and group relationship data, communication logs, and other technical data</span></td><td><span>Processed by the Tencent Cloud IM SDK provided by </span><strong><span>Tencent Cloud Computing (Beijing) Co., Ltd.</span></strong><span> to enable chat and group features.</span></td></tr><tr><td><span>Real-Time Voice (RTC)</span></td><td><span>Audio streams, room/streaming-related metadata</span></td><td><span>Processed by the real-time audio/video SDK provided by </span><strong><span>Zego Technology Co., Ltd.</span></strong><span> for voice room and related features. Microphone permission may be requested when necessary.</span></td></tr><tr><td><span>Profile and Content Upload</span></td><td><span>Images, avatars, and other files you voluntarily upload</span></td><td><span>Camera/photo library permissions may be used when selecting images. Images may be compressed before being uploaded to servers or object storage services, depending on implementation.</span></td></tr><tr><td><span>Built-in Browser / Activity Pages</span></td><td><span>Cookies, local storage, and information collected by third-party domains during webpage browsing</span></td><td><span>Processed by the operators of the corresponding webpages according to their own privacy policies. We may read basic browser information such as User-Agent for compatibility purposes.</span></td></tr><tr><td><span>Customer Service and Debugging</span></td><td><span>Contact information and communication records you provide when contacting us</span></td><td><span>Used for issue handling. The in-app support email address is </span><a href='mailto:suvasuva2025@gmail.com'><span>suvasuva2025@gmail.com</span></a><span>.</span></td></tr><tr><td><span>Account Deletion</span></td><td><span>Deletion requests and necessary account verification information</span></td><td><span>Used to process your account deletion request and retain records for the minimum legally required period.</span></td></tr></tbody></table></figure><h2 id='3-app-permissions-ios'><span>3. App Permissions (iOS)</span></h2><p><span>When you use corresponding features, we may request authorization through the system permission mechanism (which you may manage at any time in system settings):</span></p><ul><li><p><strong><span>Microphone:</span></strong><span> Used for voice rooms, real-time voice communication, and related features. Denying permission may result in such features being unavailable.</span></p></li><li><p><strong><span>Camera / Photo Library:</span></strong><span> Used for taking or selecting avatars, profile pictures, and related content (depending on implementation).</span></p></li><li><p><span>If future versions introduce new permission types, we will inform you of their purposes through permission prompts or explanatory notices before requesting authorization.</span></p></li></ul><h2 id='4-cookies-and-local-storage'><span>4. Cookies and Local Storage</span></h2><p><span>We may use local storage within the App (such as SharedPreferences or similar mechanisms) to store login status, configuration caches, and other data in order to improve user experience and security. Cookies used within embedded webpages are governed by the respective website policies.</span></p><h2 id='5-third-party-sdks--service-providers'><span>5. Third-Party SDKs / Service Providers</span></h2><p><span>To ensure service stability and security, we may integrate third-party SDKs or services. The following are the primary third-party services related to the App’s core technology stack (names and purposes are subject to official SDK documentation, and you are encouraged to retain copies of the relevant privacy policies):</span></p><ul><li><p><strong><span>Tencent Cloud IM SDK:</span></strong><span> Provides instant messaging capabilities.</span></p></li><li><p><strong><span>Zego Express SDK:</span></strong><span> Provides real-time audio and video capabilities.</span></p></li><li><p><strong><span>Network and Security:</span></strong><span> We may use encrypted transmission technologies (such as HTTPS), RSA/AES encryption, and request/response signing to prevent tampering and eavesdropping.</span></p></li></ul><p><span>We evaluate the security capabilities of third parties and require them to fulfill data processing obligations. Where third parties independently provide services to you, their own privacy policies shall apply.</span></p><h2 id='6-sharing-transfer-and-public-disclosure'><span>6. Sharing, Transfer, and Public Disclosure</span></h2><h3 id='61'><span>6.1</span></h3><p><span>We do not sell your personal information to unrelated third parties.</span></p><h3 id='62'><span>6.2</span></h3><p><span>We may share or disclose information under the following circumstances:</span></p><ul><li><p><span>With your separate consent;</span></p></li><li><p><span>To fulfill legal obligations or respond to lawful requests from judicial or administrative authorities;</span></p></li><li><p><span>With affiliates or entrusted data processors to the extent necessary to achieve the purposes described in this Policy;</span></p></li><li><p><span>In the event of mergers, divisions, asset transfers, or similar transactions involving personal information transfers, we will notify you as required by law and require the receiving party to continue being bound by this Policy.</span></p></li></ul><h2 id='7-retention-period'><span>7. Retention Period</span></h2><p><span>We retain personal information only for the period necessary to achieve the purposes described in this Policy, unless a longer retention period is required by law. After the retention period expires, we will delete or anonymize the information. Anonymized data may be used for statistical analysis.</span></p><h2 id='8-your-rights'><span>8. Your Rights</span></h2><p><span>To the extent permitted by applicable laws, you may exercise rights related to your personal information, including the right to access, copy, correct, delete, withdraw consent, delete your account, restrict processing, or object to processing.</span></p><p><span>You may delete your account through the in-app </span><strong><span>Account Deletion</span></strong><span> feature or contact us using the contact information provided at the end of this Policy.</span></p><p><span>We will respond within a reasonable period after verifying your identity, unless otherwise provided by laws or regulations.</span></p><h2 id='9-protection-of-minors'><span>9. Protection of Minors</span></h2><p><span>If you are a minor, please read this Policy and use our services under the supervision of your guardian. If we discover that we have collected a minor’s personal information without verifiable guardian consent, we will promptly delete or anonymize such information.</span></p><h2 id='10-information-security'><span>10. Information Security</span></h2><p><span>We adopt industry-standard administrative and technical measures (such as encrypted transmission, access control, and API request signing) to protect your information. However, please understand that the Internet is not an absolutely secure environment, and you are also responsible for properly safeguarding your credentials.</span></p><h2 id='11-updates-to-this-policy'><span>11. Updates to This Policy</span></h2><p><span>We may revise this Policy from time to time. Significant changes will be notified through in-app notices or other appropriate means. Continued use of the services indicates that you acknowledge and accept the updated Policy.</span></p><h2 id='12-contact-us'><span>12. Contact Us</span></h2><p><span>If you have any questions, complaints, or suggestions regarding this Policy or our processing of personal information, please contact us:</span></p><ul><li><p><span>Email: </span><a href='mailto:suvasuva2025@gmail.com'><span>suvasuva2025@gmail.com</span></a></p></li></ul><h2 id='13-governing-law'><span>13. Governing Law</span></h2><p><span>These Terms shall be governed by the laws and regulations of Cairo, Egypt. If the laws of your country conflict with this Agreement or applicable consumer protection requirements, Section 13 shall not apply to you.</span></p></div></div>
 </body>
 </html>
